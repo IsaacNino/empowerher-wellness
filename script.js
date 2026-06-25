@@ -1,6 +1,8 @@
 /* ============ ICON SETUP ============ */
 /* Initializes Lucide icons after the page loads. */
-lucide.createIcons();
+if (window.lucide) {
+  lucide.createIcons();
+}
 
 /* ============ SERVICE DATA ============ */
 /* These objects power the service modals.
@@ -79,7 +81,9 @@ function openModal(index) {
   modalBackdrop.classList.add('animate-backdrop-in');
   document.body.style.overflow = 'hidden';
 
-  lucide.createIcons();
+  if (window.lucide) {
+    lucide.createIcons();
+  }
 
   setTimeout(() => modalCloseBtn.focus(), 100);
 
@@ -156,7 +160,9 @@ mobileMenuBtn.addEventListener('click', () => {
     ? '<i data-lucide="x" class="w-6 h-6"></i>'
     : '<i data-lucide="menu" class="w-6 h-6"></i>';
 
-  lucide.createIcons();
+  if (window.lucide) {
+    lucide.createIcons();
+  }
 });
 
 /* Closes mobile menu after clicking a nav link. */
@@ -165,7 +171,9 @@ document.querySelectorAll('.mobile-nav-link').forEach((link) => {
     mobileMenuOpen = false;
     mobileMenu.classList.add('hidden');
     mobileMenuBtn.innerHTML = '<i data-lucide="menu" class="w-6 h-6"></i>';
-    lucide.createIcons();
+    if (window.lucide) {
+      lucide.createIcons();
+    }
   });
 });
 
