@@ -1,0 +1,138 @@
+/* ============ GLOBAL TYPE ============ */
+/* Sets the default body font and heading font. */
+body {
+  font-family: 'DM Sans', system-ui, sans-serif;
+}
+
+h1,
+h2,
+h3,
+.font-serif {
+  font-family: 'Playfair Display', Georgia, serif;
+}
+
+/* ============ HERO ============ */
+/* Soft overlay that sits over the hero image. */
+.hero-gradient {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 251, 252, 0.88) 0%,
+    rgba(253, 242, 245, 0.82) 40%,
+    rgba(245, 233, 238, 0.78) 100%
+  );
+}
+
+/* ============ MODAL ============ */
+/* Blurred modal backdrop. */
+.modal-backdrop {
+  background: rgba(48, 42, 59, 0.4);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+
+/* ============ VIDEO PLACEHOLDER ============ */
+/* Temporary background until Vimeo embed is ready. */
+.video-placeholder {
+  background: linear-gradient(135deg, #EADDE3 0%, #E8D8E0 50%, #D4BDC8 100%);
+}
+
+/* ============ NAVBAR SCROLL STATE ============ */
+/* Added by script.js after scrolling down. */
+.nav-scrolled {
+  background: rgba(255, 253, 249, 0.95) !important;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 1px 12px rgba(126, 116, 137, 0.1);
+}
+
+/* ============ ANIMATIONS ============ */
+/* Hero entrance animation. */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.5s ease-out forwards;
+}
+
+/* Modal entrance animation. */
+@keyframes modalIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95) translateY(16px);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.animate-modal-in {
+  animation: modalIn 0.3s ease-out forwards;
+}
+
+/* Modal backdrop fade. */
+@keyframes backdropIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.animate-backdrop-in {
+  animation: backdropIn 0.25s ease-out forwards;
+}
+
+/* ============ SECTION REVEAL ============ */
+/* Sections start hidden and fade in when scrolled into view. */
+.section-reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+}
+
+.section-reveal.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ============ OPTIONAL CARD HOVER UTILITY ============ */
+/* Not heavily used right now, but available for future cards. */
+.card-hover {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(167, 139, 250, 0.16);
+}
+
+/* ============ CUSTOM SCROLLBAR ============ */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F5F2F8;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #D4BDC8;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #C9AAB8;
+}

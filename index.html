@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+
+  <!-- ========================= -->
+  <!-- Favicons -->
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+  <link rel="icon" href="/assets/favicon.svg">
+
+  <!-- Basic page setup -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Page title -->
+  <title>EmpowerHer Wellness | Personalized Outpatient Recovery Support</title>
+
+  <meta name="description" content="EmpowerHer Wellness provides personalized outpatient support through individual therapy, life and recovery coaching, and family therapy.">
+
+  <!-- Tailwind CDN + custom theme colors/fonts -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            cream: { 50: '#FFFBFC', 100: '#FDF2F5', 200: '#F5E9EE', 300: '#EADDE3' },
+            sand: { 50: '#FDF3F6', 100: '#F5EAEF', 200: '#E8D8E0', 300: '#D4BDC8' },
+            warm: { 50: '#FCF8FA', 100: '#F6F0F3', 200: '#EDE3E8', 300: '#524555', 400: '#8A7480', 500: '#3A2A35' },
+            accent: { 50: '#FFF1F2', 100: '#FFE4E6', 200: '#FECDD3', 300: '#FDA4AF', 400: '#FB7185', 500: '#F43F5E', 600: '#E11D48' },
+          },
+          fontFamily: {
+            serif: ['Playfair Display', 'Georgia', 'serif'],
+            sans: ['DM Sans', 'system-ui', 'sans-serif'],
+          },
+        }
+      }
+    }
+  </script>
+
+  <!-- Google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet" />
+
+  <!-- Local styles -->
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+
+<body class="bg-cream-50 text-warm-400 leading-relaxed">
+
+  <!-- ============ NAVIGATION ============ -->
+  <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-transparent">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="#hero" class="font-serif text-2xl font-semibold text-accent-400 tracking-wide">EmpowerHer Wellness</a>
+
+      <!-- Desktop nav -->
+      <div class="hidden md:flex items-center gap-8">
+        <a href="#about" class="text-warm-400 hover:text-accent-400 transition-colors text-sm font-medium tracking-wide">About</a>
+        <a href="#video" class="text-warm-400 hover:text-accent-400 transition-colors text-sm font-medium tracking-wide">Meet Us</a>
+        <a href="#services" class="text-warm-400 hover:text-accent-400 transition-colors text-sm font-medium tracking-wide">Services</a>
+        <a href="#contact" class="text-warm-400 hover:text-accent-400 transition-colors text-sm font-medium tracking-wide">Contact</a>
+        <a href="#contact" class="inline-block bg-accent-400 text-white px-5 py-2.5 rounded-full text-sm font-medium hover:bg-accent-500 transition-colors shadow-sm">Let's Talk</a>
+      </div>
+
+      <!-- Mobile menu button -->
+      <button id="mobileMenuBtn" class="md:hidden text-warm-400 hover:text-accent-400 transition-colors" aria-label="Open menu">
+        <i data-lucide="menu" class="w-6 h-6"></i>
+      </button>
+    </div>
+
+    <!-- Mobile nav -->
+    <div id="mobileMenu" class="md:hidden hidden bg-cream-50 border-t border-sand-200">
+      <div class="px-6 py-4 flex flex-col gap-4">
+        <a href="#about" class="text-warm-400 hover:text-accent-400 transition-colors font-medium mobile-nav-link">About</a>
+        <a href="#video" class="text-warm-400 hover:text-accent-400 transition-colors font-medium mobile-nav-link">Meet Us</a>
+        <a href="#services" class="text-warm-400 hover:text-accent-400 transition-colors font-medium mobile-nav-link">Services</a>
+        <a href="#contact" class="text-warm-400 hover:text-accent-400 transition-colors font-medium mobile-nav-link">Contact</a>
+        <a href="#contact" class="inline-block bg-accent-400 text-white px-5 py-2.5 rounded-full text-sm font-medium hover:bg-accent-500 transition-colors text-center mobile-nav-link">Let's Talk</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ============ HERO SECTION ============ -->
+  <section id="hero" class="relative min-h-screen flex items-center overflow-hidden">
+    <!-- Background image -->
+    <div class="absolute inset-0">
+      <img src="https://static.photos/nature/1200x630/87" alt="" class="w-full h-full object-cover" />
+      <div class="hero-gradient absolute inset-0"></div>
+    </div>
+
+    <!-- Decorative blur shapes -->
+    <div class="absolute top-20 right-10 w-64 h-64 bg-sand-200 rounded-full opacity-20 blur-3xl"></div>
+    <div class="absolute bottom-20 left-10 w-48 h-48 bg-warm-200 rounded-full opacity-20 blur-3xl"></div>
+
+    <!-- Hero copy -->
+    <div class="relative z-10 max-w-6xl mx-auto px-6 py-32 md:py-0 w-full">
+      <div class="max-w-3xl mx-auto text-center">
+        <p class="text-accent-400 font-medium text-sm tracking-widest uppercase mb-4 animate-fade-in-up" style="animation-delay: 0.1s">
+          Personalized Outpatient Support
+        </p>
+
+        <h1 class="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold text-warm-300 leading-tight mb-6 animate-fade-in-up" style="animation-delay: 0.2s">
+          Intensive, Holistic, Personalized Care for Recovery
+        </h1>
+
+        <p class="text-lg md:text-xl text-warm-400 mb-10 leading-relaxed max-w-3xl mx-auto animate-fade-in-up" style="animation-delay: 0.35s">
+          EmpowerHer Wellness brings together individual therapy, in-home life coaching, and family therapy to bridge the gap between traditional outpatient therapy and higher levels of care.
+        </p>
+
+        <div class="flex flex-wrap gap-4 justify-center animate-fade-in-up" style="animation-delay: 0.5s">
+          <a href="#contact" class="inline-flex items-center gap-2 bg-accent-400 text-white px-7 py-3.5 rounded-full font-medium hover:bg-accent-500 transition-all hover:shadow-lg hover:shadow-accent-200/50">
+            Let's Talk
+            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          </a>
+
+          <a href="#services" class="inline-flex items-center gap-2 bg-white/70 text-warm-300 px-7 py-3.5 rounded-full font-medium hover:bg-white transition-all border border-sand-200">
+            Explore Services
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ ABOUT / POSITIONING SECTION ============ -->
+  <section id="about" class="py-20 md:py-28 bg-white">
+    <div class="max-w-6xl mx-auto px-6 section-reveal">
+      <div class="max-w-4xl mx-auto text-center">
+        <p class="text-accent-400 font-medium text-sm tracking-widest uppercase mb-4">
+          What Makes Us Different
+        </p>
+
+        <h2 class="font-serif text-3xl md:text-4xl lg:text-5xl font-semibold text-warm-300 mb-8 leading-snug">
+          A Bridge Between Outpatient Therapy and Higher Levels of Care
+        </h2>
+
+        <div class="w-16 h-0.5 bg-sand-300 mx-auto mb-8"></div>
+
+        <p class="text-lg text-warm-400 mb-6 leading-relaxed">
+          EmpowerHer Wellness is a personalized outpatient service that combines individual therapy, life coaching, and family therapy to create a more connected and effective path toward recovery.
+        </p>
+
+        <p class="text-lg text-warm-400 mb-6 leading-relaxed">
+          We were created to bridge the gap between traditional outpatient therapy and residential levels of care. Rather than requiring clients to participate in multiple group programs that may not address their specific needs, we tailor treatment around the individual and the realities of their daily life.
+        </p>
+
+        <p class="text-lg text-warm-400 mb-6 leading-relaxed">
+          Sometimes individual therapy alone is not enough. Recovery requires support that extends beyond the therapy office and into the environments where life is actually happening. Through the integration of therapy and life coaching, we help clients apply what they are learning in treatment to their everyday goals, relationships, and challenges.
+        </p>
+
+        <p class="text-lg text-warm-400 mb-6 leading-relaxed">
+          We also recognize that meaningful recovery rarely happens in isolation. Family members, trusted friends, sponsors, and other support systems often play a critical role in long-term success. Our family therapy component helps create alignment, accountability, encouragement, and sustainable support throughout the recovery process.
+        </p>
+
+        <p class="text-lg text-warm-400 leading-relaxed">
+          Most importantly, our team works together throughout the entire process. We do not outsource pieces of care to disconnected providers. Every part of the experience is designed to work together so clients receive personalized support that feels cohesive, practical, and relevant to their lives.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ VIDEO / TEAM SECTION ============ -->
+  <section id="video" class="py-20 md:py-28 bg-cream-100">
+    <div class="max-w-5xl mx-auto px-6 section-reveal">
+      <div class="text-center mb-12">
+        <p class="text-accent-400 font-medium text-sm tracking-widest uppercase mb-4">Meet the Team</p>
+
+        <h2 class="font-serif text-3xl md:text-4xl font-semibold text-warm-300 mb-4">
+          The Story Behind Our Approach
+        </h2>
+
+        <p class="text-warm-400 max-w-2xl mx-auto">
+          EmpowerHer Wellness was created from the belief that care should meet people where they are—not where a program says they should be. In this video, Katie and Emily share the experiences that inspired this model and explain how therapy, life coaching, and family support come together to create a more personalized path toward recovery.
+        </p>
+      </div>
+
+      <!-- Vimeo embed area -->
+      <!-- ==================== Meet the Team Video ==================== -->
+      <!-- Responsive Vimeo embed -->
+      <div class="bg-white rounded-[32px] p-4 shadow-lg border border-sand-200 mb-10">
+      <div class="relative aspect-video overflow-hidden rounded-2xl">
+          <iframe
+            src="https://player.vimeo.com/video/1203582883?title=0&byline=0&portrait=0&badge=0&autopause=1"
+            class="absolute inset-0 w-full h-full"
+            frameborder="0"
+            allow="autoplay; fullscreen; picture-in-picture"
+            allowfullscreen
+            title="EmpowerHer Wellness | Meet The Team">
+          </iframe>
+      </div>
+      </div>
+
+    <!-- Vimeo Player API (only needed once on the page) -->
+    <script src="https://player.vimeo.com/api/player.js"></script>
+
+      <!-- Team cards -->
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+        <div class="bg-white rounded-2xl p-6 text-center shadow-sm border border-sand-200">
+          <div class="w-20 h-20 rounded-full overflow-hidden mx-auto mb-4 ring-2 ring-sand-200 ring-offset-2">
+            <img src="https://mindfultherapygroup.com/wp-content/uploads/2026/01/50149-Katharine-Jones-Headshot-Edited.jpg" alt="Katharine Jones" class="w-full h-full object-cover" />
+          </div>
+          <h3 class="font-serif text-lg font-semibold text-warm-300 mb-1">Katharine Jones</h3>
+          <p class="text-accent-400 text-sm font-medium mb-2">Individual Therapist & Art Therapist</p>
+          <p class="text-warm-400 text-sm leading-relaxed">Combines trauma-informed therapy with creative expression to help women explore difficult experiences, rediscover their voice, and move toward lasting healing.</p>
+        </div>
+
+        <div class="bg-white rounded-2xl p-6 text-center shadow-sm border border-sand-200">
+          <div class="w-20 h-20 rounded-full overflow-hidden mx-auto mb-4 ring-2 ring-sand-200 ring-offset-2">
+            <img src="https://mindfultherapygroup.com/wp-content/uploads/2026/05/50178-Larry-Algiene-Headshot-Edited.jpg" alt="Larry Algiene" class="w-full h-full object-cover" />
+          </div>
+          <h3 class="font-serif text-lg font-semibold text-warm-300 mb-1">Larry Algiene</h3>
+          <p class="text-accent-400 text-sm font-medium mb-2">Individual & Family Therapist</p>
+          <p class="text-warm-400 text-sm leading-relaxed">Provides compassionate, values-driven therapy that helps clients navigate life’s challenges, strengthen relationships, and build lasting confidence through meaningful change.</p>
+        </div>
+
+        <div class="bg-white rounded-2xl p-6 text-center shadow-sm border border-sand-200">
+          <div class="w-20 h-20 rounded-full overflow-hidden mx-auto mb-4 ring-2 ring-sand-200 ring-offset-2">
+            <img src="https://media.licdn.com/dms/image/v2/D5603AQEe8aYniYRQyA/profile-displayphoto-shrink_800_800/B56Z2zfq8CGUAg-/0/1776832917561?e=1783555200&v=beta&t=OuAFaAXIIkFNthY2ZRC-jVEtblR4sO2BCOq9BJ1yCWc" alt="Emily Raymond" class="w-full h-full object-cover" />
+          </div>
+          <h3 class="font-serif text-lg font-semibold text-warm-300 mb-1">Emily Raymond</h3>
+          <p class="text-accent-400 text-sm font-medium mb-2">Life & Recovery Coach</p>
+          <p class="text-warm-400 text-sm leading-relaxed">Provides personalized life and recovery coaching that helps clients build confidence, develop healthy routines, and turn therapeutic insight into meaningful daily action.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SERVICES SECTION ============ -->
+  <section id="services" class="py-20 md:py-28 bg-white">
+    <div class="max-w-6xl mx-auto px-6 section-reveal">
+      <div class="text-center mb-14">
+        <p class="text-accent-400 font-medium text-sm tracking-widest uppercase mb-4">How We Help</p>
+
+        <h2 class="font-serif text-3xl md:text-4xl lg:text-5xl font-semibold text-warm-300 mb-4">
+          Our Services
+        </h2>
+
+        <p class="text-warm-400 max-w-xl mx-auto text-lg">
+          Every person is different, and so is every path to healing. Explore our areas of support to see how therapy, coaching, and family care work together.
+        </p>
+      </div>
+
+      <!-- Service cards trigger JS modal by data-service index -->
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-8 md:gap-12 max-w-4xl mx-auto" id="servicesGrid">
+        <button class="service-card group relative w-full max-w-[280px] sm:max-w-none mx-auto cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-accent-300 focus-visible:ring-offset-4 hover:-translate-y-2 transition-all duration-500" data-service="0" aria-label="Learn more about Individual Therapy">
+          <div class="relative aspect-[3/4] overflow-hidden rounded-t-[40%] rounded-b-2xl shadow-lg group-hover:shadow-2xl transition-shadow duration-500">
+            <img src="https://cdn.pixabay.com/photo/2025/09/23/11/36/therapy-for-growth-and-healing-9850351_1280.jpg" alt="" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out" />
+            <div class="absolute inset-x-0 bottom-0 h-2/5 bg-gradient-to-t from-black/25 to-transparent pointer-events-none"></div>
+          </div>
+          <div class="relative -mt-5 flex justify-center">
+            <span class="inline-block bg-white/90 backdrop-blur-md px-6 py-2.5 rounded-full font-serif text-sm md:text-base font-medium text-warm-300 tracking-wide shadow-xl border border-white/50 group-hover:bg-white group-hover:shadow-2xl transition-all duration-300">Individual Therapy</span>
+          </div>
+        </button>
+
+        <button class="service-card group relative w-full max-w-[280px] sm:max-w-none mx-auto cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-accent-300 focus-visible:ring-offset-4 hover:-translate-y-2 transition-all duration-500" data-service="1" aria-label="Learn more about Life and Recovery Coaching">
+          <div class="relative aspect-[3/4] overflow-hidden rounded-t-[40%] rounded-b-2xl shadow-lg group-hover:shadow-2xl transition-shadow duration-500">
+            <img src="https://static.photos/people/640x360/15" alt="" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out" />
+            <div class="absolute inset-x-0 bottom-0 h-2/5 bg-gradient-to-t from-black/25 to-transparent pointer-events-none"></div>
+          </div>
+          <div class="relative -mt-5 flex justify-center">
+            <span class="inline-block bg-white/90 backdrop-blur-md px-6 py-2.5 rounded-full font-serif text-sm md:text-base font-medium text-warm-300 tracking-wide shadow-xl border border-white/50 group-hover:bg-white group-hover:shadow-2xl transition-all duration-300">Life & Recovery Coaching</span>
+          </div>
+        </button>
+
+        <button class="service-card group relative w-full max-w-[280px] sm:max-w-none mx-auto cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-accent-300 focus-visible:ring-offset-4 hover:-translate-y-2 transition-all duration-500" data-service="2" aria-label="Learn more about Family Therapy and Support">
+          <div class="relative aspect-[3/4] overflow-hidden rounded-t-[40%] rounded-b-2xl shadow-lg group-hover:shadow-2xl transition-shadow duration-500">
+            <img src="https://cdn.pixabay.com/photo/2024/08/01/14/41/marriage-8937363_1280.jpg" alt="" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out" />
+            <div class="absolute inset-x-0 bottom-0 h-2/5 bg-gradient-to-t from-black/25 to-transparent pointer-events-none"></div>
+          </div>
+          <div class="relative -mt-5 flex justify-center">
+            <span class="inline-block bg-white/90 backdrop-blur-md px-6 py-2.5 rounded-full font-serif text-sm md:text-base font-medium text-warm-300 tracking-wide shadow-xl border border-white/50 group-hover:bg-white group-hover:shadow-2xl transition-all duration-300">Family Therapy & Support</span>
+          </div>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SERVICE MODAL ============ -->
+  <div id="serviceModal" class="fixed inset-0 z-[100] hidden" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div id="modalBackdrop" class="modal-backdrop absolute inset-0"></div>
+
+    <div class="relative z-10 flex items-center justify-center min-h-screen p-4">
+      <div id="modalContent" class="bg-white rounded-3xl max-w-lg w-full p-8 md:p-10 relative shadow-2xl animate-modal-in max-h-[90vh] overflow-y-auto">
+        <button id="modalCloseBtn" class="absolute top-4 right-4 w-10 h-10 rounded-full bg-cream-100 hover:bg-cream-200 flex items-center justify-center text-warm-400 hover:text-warm-500 transition-colors" aria-label="Close modal">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+
+        <div id="modalIcon" class="w-16 h-16 rounded-2xl flex items-center justify-center mb-6"></div>
+
+        <h3 id="modalTitle" class="font-serif text-2xl md:text-3xl font-semibold text-warm-300 mb-4 pr-8"></h3>
+
+        <p id="modalDescription" class="text-warm-400 leading-relaxed mb-6"></p>
+
+        <div class="mb-6">
+          <h4 class="font-serif text-lg font-semibold text-warm-300 mb-2 flex items-center gap-2">
+            <i data-lucide="user" class="w-4 h-4 text-accent-400"></i>
+            Who this is for
+          </h4>
+          <p id="modalWho" class="text-warm-400 text-sm leading-relaxed bg-cream-50 rounded-xl p-4 border border-cream-200"></p>
+        </div>
+
+        <div class="mb-8">
+          <h4 class="font-serif text-lg font-semibold text-warm-300 mb-2 flex items-center gap-2">
+            <i data-lucide="heart-handshake" class="w-4 h-4 text-accent-400"></i>
+            How we help
+          </h4>
+          <p id="modalHow" class="text-warm-400 text-sm leading-relaxed bg-cream-50 rounded-xl p-4 border border-cream-200"></p>
+        </div>
+
+        <a href="#contact" id="modalCTA" class="inline-flex items-center gap-2 bg-accent-400 text-white px-6 py-3 rounded-full font-medium hover:bg-accent-500 transition-colors w-full justify-center text-center">
+          Start the Conversation
+          <i data-lucide="arrow-right" class="w-4 h-4"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ CONTACT SECTION ============ -->
+  <section id="contact" class="py-20 md:py-28 bg-cream-100 relative overflow-hidden">
+    <div class="absolute top-0 left-0 w-72 h-72 bg-accent-200 rounded-full opacity-15 blur-3xl -translate-x-1/2 -translate-y-1/2"></div>
+    <div class="absolute bottom-0 right-0 w-80 h-80 bg-accent-100 rounded-full opacity-20 blur-3xl translate-x-1/3 translate-y-1/3"></div>
+
+    <div class="max-w-6xl mx-auto px-6 section-reveal relative z-10">
+      <div class="text-center mb-14">
+        <p class="text-accent-400 font-medium text-sm tracking-widest uppercase mb-4">Let's Connect</p>
+
+        <h2 class="font-serif text-3xl md:text-4xl lg:text-5xl font-semibold text-warm-300 mb-4">
+          Ready to take the first step?
+        </h2>
+
+        <p class="text-warm-400 max-w-xl mx-auto text-lg">
+          Reaching out takes courage, and we're here to make it feel easy. Send us a message and we'll get back to you within one business day.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 max-w-5xl mx-auto">
+        <!-- Contact info -->
+        <div class="space-y-8">
+          <div class="flex items-start gap-4">
+            <div class="w-12 h-12 bg-sand-100 rounded-xl flex items-center justify-center shrink-0">
+              <i data-lucide="phone" class="w-5 h-5 text-accent-400"></i>
+            </div>
+            <div>
+              <h4 class="font-semibold text-warm-300 mb-1">Phone</h4>
+              <p class="text-warm-400 text-sm">(720) 878-6444</p>
+              <p class="text-warm-400 text-sm">Mon–Fri, 9am–5pm</p>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-4">
+            <div class="w-12 h-12 bg-sand-100 rounded-xl flex items-center justify-center shrink-0">
+              <i data-lucide="mail" class="w-5 h-5 text-accent-400"></i>
+            </div>
+            <div>
+              <h4 class="font-semibold text-warm-300 mb-1">Email</h4>
+              <p class="text-warm-400 text-sm">lalgiene@mac.com</p>
+              <p class="text-warm-400 text-sm">We typically respond within 48 hours</p>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-4">
+            <div class="w-12 h-12 bg-sand-100 rounded-xl flex items-center justify-center shrink-0">
+              <i data-lucide="map-pin" class="w-5 h-5 text-accent-400"></i>
+            </div>
+            <div>
+              <h4 class="font-semibold text-warm-300 mb-1">Location</h4>
+              <p class="text-warm-400 text-sm">In-person sessions in Northern Colorado</p>
+              <p class="text-warm-400 text-sm">Telehealth available statewide</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact form; submits to /api/contact via script.js -->
+        <form id="contactForm" class="bg-white rounded-3xl p-8 md:p-10 shadow-sm border border-cream-200 space-y-5">
+            <!-- Hidden honeypot field for spam protection. Real users will not see this. -->
+            <div class="hidden" aria-hidden="true">
+            <label for="website">Website</label>
+            <input
+                type="text"
+                id="website"
+                name="website"
+                tabindex="-1"
+                autocomplete="off"
+            />
+            </div>
+            <div>
+            <label for="name" class="block text-sm font-medium text-warm-300 mb-1.5">Full Name</label>
+            <input type="text" id="name" name="name" required placeholder="Your name" class="w-full px-4 py-3 rounded-xl border border-cream-200 bg-cream-50 text-warm-300 placeholder-warm-400/60 focus:outline-none focus:ring-2 focus:ring-accent-300 focus:border-transparent transition-all text-sm" />
+          </div>
+
+          <div>
+            <label for="email" class="block text-sm font-medium text-warm-300 mb-1.5">Email</label>
+            <input type="email" id="email" name="email" required placeholder="you@email.com" class="w-full px-4 py-3 rounded-xl border border-cream-200 bg-cream-50 text-warm-300 placeholder-warm-400/60 focus:outline-none focus:ring-2 focus:ring-accent-300 focus:border-transparent transition-all text-sm" />
+          </div>
+
+          <div>
+            <label for="supportType" class="block text-sm font-medium text-warm-300 mb-1.5">
+              What type of support are you looking for?
+            </label>
+            <select
+              id="supportType"
+              name="supportType"
+              required
+              class="w-full px-4 py-3 rounded-xl border border-cream-200 bg-cream-50 text-warm-300 focus:outline-none focus:ring-2 focus:ring-accent-300 focus:border-transparent transition-all text-sm"
+            >
+              <option value="">Select one</option>
+              <option>Individual Therapy</option>
+              <option>Life & Recovery Coaching</option>
+              <option>Family Therapy & Support</option>
+              <option>Not Sure Yet</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="phone" class="block text-sm font-medium text-warm-300 mb-1.5">Phone <span class="text-warm-400 font-normal">(optional)</span></label>
+            <input type="tel" id="phone" name="phone" placeholder="(555) 000-0000" class="w-full px-4 py-3 rounded-xl border border-cream-200 bg-cream-50 text-warm-300 placeholder-warm-400/60 focus:outline-none focus:ring-2 focus:ring-accent-300 focus:border-transparent transition-all text-sm" />
+          </div>
+
+          <div>
+            <label for="message" class="block text-sm font-medium text-warm-300 mb-1.5">What brings you here?</label>
+            <textarea id="message" name="message" rows="4" required placeholder="Share a little about what you're looking for — no pressure to be perfect here." class="w-full px-4 py-3 rounded-xl border border-cream-200 bg-cream-50 text-warm-300 placeholder-warm-400/60 focus:outline-none focus:ring-2 focus:ring-accent-300 focus:border-transparent transition-all text-sm resize-none"></textarea>
+          </div>
+
+          <div>
+            <label for="how" class="block text-sm font-medium text-warm-300 mb-1.5">How did you hear about us? <span class="text-warm-400 font-normal">(optional)</span></label>
+            <select id="how" name="how" class="w-full px-4 py-3 rounded-xl border border-cream-200 bg-cream-50 text-warm-300 focus:outline-none focus:ring-2 focus:ring-accent-300 focus:border-transparent transition-all text-sm">
+              <option value="">Select one</option>
+              <option>Google search</option>
+              <option>Instagram or social media</option>
+              <option>Friend or family member</option>
+              <option>Doctor or therapist referral</option>
+              <option>School counselor</option>
+              <option>Other</option>
+            </select>
+          </div>
+
+          <button type="submit" class="w-full bg-accent-400 text-white py-3.5 rounded-full font-medium hover:bg-accent-500 transition-all hover:shadow-lg hover:shadow-accent-200/50 flex items-center justify-center gap-2">
+            Start the Conversation
+            <i data-lucide="send" class="w-4 h-4"></i>
+          </button>
+
+          <p class="text-center text-xs text-warm-400 mt-2">Your information is confidential. We'll never share it.</p>
+        </form>
+      </div>
+
+      <!-- Success Toast -->
+      <div id="formSuccess"
+          class="hidden fixed bottom-6 left-1/2 -translate-x-1/2 bg-white rounded-2xl shadow-xl border border-sand-200 px-6 py-5 max-w-md w-[90%] z-[200] animate-modal-in">
+
+        <div class="flex items-start gap-4">
+
+          <div class="w-11 h-11 bg-sand-100 rounded-full flex items-center justify-center shrink-0">
+            <i data-lucide="heart" class="w-5 h-5 text-accent-400"></i>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-warm-300 mb-1">
+              Thank you for reaching out.
+            </h4>
+
+            <p class="text-sm text-warm-400 leading-relaxed">
+              We've received your message and someone from our team will reach out within one business day.
+              We look forward to connecting with you.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="bg-warm-500 text-cream-100 py-12">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-10 mb-10">
+        <div>
+          <h3 class="font-serif text-2xl font-semibold mb-3 text-cream-50">EmpowerHer Wellness</h3>
+          <p class="text-cream-300 text-sm leading-relaxed">Personalized outpatient support through individual therapy, life and recovery coaching, and family-centered care.</p>
+        </div>
+
+        <div>
+          <h4 class="font-semibold text-sm tracking-wider uppercase mb-4 text-cream-200">Quick Links</h4>
+          <ul class="space-y-2">
+            <li><a href="#about" class="text-cream-300 hover:text-white transition-colors text-sm">About</a></li>
+            <li><a href="#video" class="text-cream-300 hover:text-white transition-colors text-sm">Meet the Team</a></li>
+            <li><a href="#services" class="text-cream-300 hover:text-white transition-colors text-sm">Services</a></li>
+            <li><a href="#contact" class="text-cream-300 hover:text-white transition-colors text-sm">Contact</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="font-semibold text-sm tracking-wider uppercase mb-4 text-cream-200">Contact</h4>
+          <ul class="space-y-2 text-cream-300 text-sm">
+            <li>(720) 878-6444</li>
+            <li>lalgiene@mac.com</li>
+            <li>Northern Colorado & Telehealth</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="border-t border-cream-200/20 pt-6 text-center">
+        <p class="text-cream-300 text-xs">&copy; 2026 EmpowerHer Wellness Counseling. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Icons and local JavaScript -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="./script.js"></script>
+</body>
+</html>
