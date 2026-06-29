@@ -63,7 +63,7 @@ export default async function handler(req, res) {
       : "";
 
     const { error } = await resend.emails.send({
-      from: "EmpowerHer Website <onboarding@resend.dev>",
+      from: "EmpowerHer Website <noreply@empowerher-wellness.com>",
       to: recipients,
       subject: `${safeSupportType} Inquiry • ${safeName}`,
       reply_to: safeEmail,
